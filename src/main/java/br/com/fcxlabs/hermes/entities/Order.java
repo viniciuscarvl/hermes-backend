@@ -8,12 +8,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "orders")
+@Table(name = "ORDERS")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Order {
     @Id
-    private int id;
+    private Long id;
     private boolean delivered;
 }

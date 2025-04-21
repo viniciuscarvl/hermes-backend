@@ -6,13 +6,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "trackers")
+@Table(name = "TRACKERS")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Tracker {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String name;
+    private Double latitude;
+    private Double longitude;
 }

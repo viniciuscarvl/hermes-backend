@@ -8,16 +8,16 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Entity
-@Table(name = "sequentials")
+@Table(name = "SEQUENTIALS")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Sequential {
     @Id
-    private int id;
+    private Long id;
     @OneToOne
     private Vehicle vehicle;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Order> orders;
-    private boolean fineshed;
+    private boolean finished;
 }
